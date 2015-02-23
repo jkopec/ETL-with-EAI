@@ -27,15 +27,15 @@ import static org.apache.camel.language.juel.JuelExpression.el;
 // START SNIPPET: example
 public class EtlRoutes extends SpringRouteBuilder {
     public void configure() throws Exception {
+    	
+        from("file:src/data?noop=true")//Daten werden aus src/data (row[n].xml) gelesen  noop=true - damit wird sichergestellt, dass die Files waehrend der Laufzeit nicht verschoben oder gelöscht werden
+            .convertBodyTo(PersonDocument.class)//Daten werden zu PersonDocument konvertiert
+            .to("jpa:org.apache.camel.example.etl.CustomerEntity");//Daten werden zur Datenbank mittels jpa geschickt
 
-        from("file:src/data?noop=true")
-            .convertBodyTo(PersonDocument.class)
-            .to("jpa:org.apache.camel.example.etl.CustomerEntity");
-
-        // the following will dump the database to files
+        // Die Datenbank wird nun in Files ausgelagert
         from("jpa:org.apache.camel.example.etl.CustomerEntity?consumer.initialDelay=3000&delay=3000&consumeDelete=false&consumeLockEntity=false")
             .setHeader(Exchange.FILE_NAME, el("${in.body.userName}.xml"))
-            .to("file:target/customers");
+            .to("file:target/customers"); //Hier werden alle jemals erstellten Customer ausgelagert 
     }
 }
 // END SNIPPET: example

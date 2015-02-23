@@ -17,12 +17,12 @@
 package org.apache.camel.example.etl;
 
 /**
- * A command line tool to run this example
- *
+ * Die Main führt dieses Beispiel mit ueber die Konsole 
+ * uebergebenen Parametern aus
  * @version 
  */
 public class Main extends org.apache.camel.spring.Main {
     public static void main(String... args) throws Exception {
-        new Main().run(args);
+        new Main().run(args);//Hier wird die run-Methode aus der Superklasse MainSupport ausgeführt
     }
 }

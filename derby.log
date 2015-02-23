@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Sat Feb 21 13:07:44 CET 2015:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-014b-ac09-493d-000007a880e8 
-on database directory /Users/jakubkopec/GitHub/ETL/target/derby with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
+Sun Feb 22 21:09:13 CET 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-014b-b2e8-74b6-00000768e118 
+on database directory /Users/jakubkopec/GitHub/ETL/target/derby with class loader sun.misc.Launcher$AppClassLoader@4a574795 
 Loaded from file:/Users/jakubkopec/.m2/repository/org/apache/derby/derby/10.10.2.0/derby-10.10.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_20-b26
@@ -11,3 +11,6 @@ os.arch=x86_64
 os.version=10.10.2
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Feb 22 21:09:19 CET 2015:
+Shutting down instance a816c00e-014b-b2e8-74b6-00000768e118 on database directory /Users/jakubkopec/GitHub/ETL/target/derby with class loader sun.misc.Launcher$AppClassLoader@4a574795 

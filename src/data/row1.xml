@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<person user="erni">
-  <firstName>Andreas</firstName>
-  <lastName>Ernhofer</lastName>
-  <city>Vienna</city>
+<person user="james">
+  <firstName>James</firstName>
+  <lastName>Strachan</lastName>
+  <city>London</city>
 </person>

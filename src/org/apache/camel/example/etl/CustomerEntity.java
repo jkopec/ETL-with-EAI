@@ -26,9 +26,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
- * An example entity bean which can be marshalled to/from XML
- * 
- * @version 
+ * Ein Beispiel für eine Entität welche von oder zu einem 
+ * XML Dokument umgewandelt werden kann
  */
 @Entity(name = "customer")
 @XmlRootElement(name = "customer")
@@ -47,70 +46,122 @@ public class CustomerEntity {
 
     @Id
     @GeneratedValue
+    /**
+     * Gibt die id zurueck.
+     * @return die id
+     */
     public Long getId() {
         return id;
     }
-
+    /**
+     * Setzt die id.
+     * @param id die id
+     */
     public void setId(Long id) {
         this.id = id;
     }
-
+    /**
+     * Gibt die Stadt zurueck.
+     * @return die Stadt
+     */
     public String getCity() {
         return city;
     }
-
+    /**
+     * Setzt die Stadt.
+     * @param city die Stadt
+     */
     public void setCity(String city) {
         this.city = city;
     }
-
+    /**
+     * Gibt den Vornamen zurueck.
+     * @return den Vornamen
+     */
     public String getFirstName() {
         return firstName;
     }
-
+    /**
+     * Setzt den Vornamen.
+     * @param firstName der Vorname
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
+    /**
+     * Gibt die Telefonnummer zurueck.
+     * @return die Telefonnummer
+     */
     public String getPhone() {
         return phone;
     }
-
+    /**
+     * Setzt die Telefonnummer.
+     * @param phone die Telefonnummer
+     */
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
+    /**
+     * Gibt die Straße zurueck.
+     * @return die Straße
+     */
     public String getStreet() {
         return street;
     }
-
+    /**
+     * Setzt die Straße.
+     * @param street die Straße.
+     */
     public void setStreet(String street) {
         this.street = street;
     }
-
+    /**
+     * Gibt den Nachnamen zurueck.
+     * @return den Nachnamen
+     */
     public String getSurname() {
         return surname;
     }
-
+    /**
+     * Setzt den Nachnamen.
+     * @param surname den Nachnamen
+     */
     public void setSurname(String surname) {
         this.surname = surname;
     }
-
+    /**
+     * Gibt den Usernamen zurueck.
+     * @return den Usernamen
+     */
     public String getUserName() {
         return userName;
     }
-
+    /**
+     * Setzt den Usernamen
+     * @param userName der Username
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
+    /**
+     * Gibt die Postleitzahl zurueck.
+     * @return die Postleitzahl
+     */
     public String getZip() {
         return zip;
     }
-
+    /**
+     * Setzt die Postleitzahl.
+     * @param zip die Postleitzahl
+     */
     public void setZip(String zip) {
         this.zip = zip;
     }
-
+    
+   /**
+    * Diese Methode wandelt den Benutzer in einen String um und gibt diesen zurueck.
+    */
     public String toString() {
         return "Customer[userName: " + getUserName() + " firstName: " + getFirstName() + " surname: " + getSurname() + "]";
     }
